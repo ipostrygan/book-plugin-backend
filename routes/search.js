@@ -4,7 +4,7 @@ const request = require('request-promise');
 const { parse } = require('node-html-parser');
 
 const ORIGIN = 'http://flibusta.is';
-const formats = ['mobi', 'fb2', 'epub', 'txt'];
+const formats = ['mobi', 'fb2', 'epub'];
 
 router.get('/', async function(req, res) {
   const page = await request(`${ORIGIN}/booksearch?ask=${encodeURIComponent(req.query.name)}&chb=on`);
